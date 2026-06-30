@@ -9,6 +9,7 @@
     :root {
       --ink: #0B0B0B;
       --mint: #67EFC3;
+      --mint-light: #EAFBF4;
       --grey: #6B6B6B;
       --line: #ECECEC;
     }
@@ -32,11 +33,11 @@
 
     .card {
       width: 100%;
-      max-width: 800px;
+      max-width: 720px;
       background: #FFFFFF;
       border-radius: 20px;
       box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
-      padding: 56px 48px 40px;
+      padding: 48px 44px 36px;
       position: relative;
       overflow: hidden;
     }
@@ -54,7 +55,8 @@
     }
 
     .logo {
-      margin-bottom: 48px;
+      text-align: center;
+      margin-bottom: 40px;
     }
 
     .logo img {
@@ -62,19 +64,20 @@
       width: auto;
     }
 
-    .slide {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      gap: 32px;
-      flex-wrap: wrap;
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 20px;
       position: relative;
       z-index: 1;
     }
 
-    .col {
-      flex: 1;
-      min-width: 200px;
+    .cell {
+      border: 2px solid var(--mint);
+      border-radius: 16px;
+      padding: 22px 22px 20px;
+      background: var(--mint-light);
     }
 
     .tag {
@@ -92,61 +95,74 @@
 
     .name {
       font-weight: bold;
-      font-size: 17px;
+      font-size: 16px;
       margin-bottom: 4px;
     }
 
     .role {
-      font-size: 12.5px;
+      font-size: 12px;
       margin-bottom: 2px;
       color: var(--grey);
       line-height: 1.5;
     }
 
     .detail {
-      font-size: 13px;
-      margin-top: 14px;
+      font-size: 12.5px;
+      margin-top: 12px;
     }
 
     .detail a {
       color: var(--ink);
       text-decoration: none;
-      border-bottom: 1px solid var(--mint);
+      border-bottom: 1px solid var(--ink);
       padding-bottom: 1px;
     }
 
     .detail a:hover {
       color: #000;
-      border-bottom-color: var(--ink);
     }
 
-    .divider {
-      width: 1px;
-      background: var(--line);
+    .ig-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .ig-icon-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 14px;
+      background: #FFFFFF;
+      flex-shrink: 0;
+    }
+
+    .ig-icon {
+      width: 28px;
+      height: 28px;
     }
 
     .footer {
-      margin-top: 48px;
-      padding-top: 20px;
+      margin-top: 36px;
+      padding-top: 18px;
       border-top: 1px solid var(--line);
       font-size: 11px;
       color: var(--grey);
       text-align: center;
       letter-spacing: 0.5px;
+      position: relative;
+      z-index: 1;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 560px) {
       .card {
-        padding: 40px 28px 32px;
+        padding: 36px 26px 28px;
       }
 
-      .slide {
-        flex-direction: column;
-        gap: 28px;
-      }
-
-      .divider {
-        display: none;
+      .grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -160,8 +176,8 @@
         alt="Clear">
     </div>
 
-    <div class="slide">
-      <div class="col">
+    <div class="grid">
+      <div class="cell">
         <div class="tag">Architecture</div>
         <div class="name">Rawan Alhaloul</div>
         <div class="role">Architect</div>
@@ -170,9 +186,7 @@
         <div class="detail"><a href="tel:+966545198528">+966 54 519 8528</a></div>
       </div>
 
-      <div class="divider"></div>
-
-      <div class="col">
+      <div class="cell">
         <div class="tag">Brand</div>
         <div class="name">Anoud Al Falih</div>
         <div class="role">Brand & Communication Manager</div>
@@ -180,16 +194,32 @@
         <div class="detail"><a href="tel:+966537550736">+966 53 755 0736</a></div>
       </div>
 
-      <div class="divider"></div>
-
-      <div class="col">
-        <div class="tag">Reach Out To Us</div>
+      <div class="cell">
+        <div class="tag">Online</div>
         <div class="name">Clear Website</div>
         <div class="detail"><a href="https://cleardes.com" target="_blank">cleardes.com</a></div>
       </div>
+
+      <div class="cell">
+        <div class="tag">Follow</div>
+        <div class="ig-row">
+          <a class="ig-icon-wrap" href="https://instagram.com/cleardes" target="_blank" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="ig-icon">
+              <rect x="2" y="2" width="20" height="20" rx="6" stroke="#0B0B0B" stroke-width="2" />
+              <circle cx="12" cy="12" r="5" stroke="#0B0B0B" stroke-width="2" />
+              <circle cx="17.5" cy="6.5" r="1.4" fill="#0B0B0B" />
+            </svg>
+          </a>
+          <div>
+            <div class="name">Instagram</div>
+            <div class="detail" style="margin-top:4px;"><a href="https://instagram.com/cleardes"
+                target="_blank">@cleardes</a></div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="footer">CLEAR DESIGN STUDIO</div>
+    <div class="footer">CLEAR</div>
   </div>
 </body>
 
