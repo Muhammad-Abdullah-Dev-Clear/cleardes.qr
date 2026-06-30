@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact</title>
+<style>
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    font-family: Arial, Calibri, sans-serif;
+    background: #FFFFFF;
+    color: #000000;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding: 24px;
+  }
+  .slide{
+    width: 100%;
+    max-width: 760px;
+    display:flex;
+    justify-content:space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .col{
+    flex: 1;
+    min-width: 200px;
+  }
+  .name{
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 2px;
+  }
+  .role{
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
+  .detail{
+    font-size: 12px;
+    margin-top: 6px;
+  }
+  .detail a{
+    color: #1155CC;
+    text-decoration: underline;
+  }
+  @media (max-width: 600px){
+    .slide{ flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+  <div class="slide">
+    <div class="col">
+      <div class="name">Rawan Alhaloul</div>
+      <div class="role">Architect</div>
+      <div class="role">Team Leader – Urban Code Unit</div>
+      <div class="detail"><a href="mailto:r.alhaloul@cleardes.com">r.alhaloul@cleardes.com</a></div>
+      <div class="detail"><a href="tel:+966545198528">+966 54 519 8528</a></div>
+    </div>
+
+    <div class="col">
+      <div class="name">Anoud Al Falih</div>
+      <div class="role">Brand & Communication Manager</div>
+      <div class="detail"><a href="mailto:a.alfalih@cleardes.com">a.alfalih@cleardes.com</a></div>
+      <div class="detail"><a href="tel:+966537550736">+966 53 755 0736</a></div>
+    </div>
+
+    <div class="col">
+      <div class="name">Clear Website</div>
+      <div class="detail"><a href="https://cleardes.com" target="_blank">https://cleardes.com</a></div>
+    </div>
+  </div>
+</body>
+</html>
